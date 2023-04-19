@@ -1,0 +1,159 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #5b162d;
+    height: 60px;
+    width: 100vw;
+    color: #d9e7ff;
+    line-height: 60px;
+    text-align: center;
+    position: fixed;
+    top: 0;
+}
+
+body {
+    width: 100vw;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: rgba(122, 122, 122, 0.841);
+}
+
+.container {
+    margin-top: 65px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    gap: 0.7em;
+}
+
+.container h3 {
+    padding-left: 0.7em;
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    background-color: #d9e7ff;
+    box-shadow: 0 0px 10px 2px black;
+    text-transform: uppercase;
+}
+
+.tarjeta {
+    margin: auto;
+    display: flex;
+    height: 240px;
+    flex: 1 0 320px;
+    max-width: 420px;
+    flex-direction: column;
+    background: linear-gradient(90deg, #d53369 0%, #daae51 100%);
+    border-radius: 5px;
+    padding: 0.5em 0.5em;
+    -webkit-box-shadow: 0px 7px 43px -12px rgba(0, 0, 0, 0.66);
+    -moz-box-shadow: 0px 7px 43px -12px rgba(0, 0, 0, 0.66);
+    box-shadow: 0px 7px 43px -12px rgba(216, 73, 73, 0.66);
+}
+
+.card {
+    max-width: 100%;
+    overflow: hidden;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-aroud;
+    gap: 1em;
+    margin-top: 0.5em;
+}
+
+.card img {
+    border-radius: 50%;
+    margin-right: 5px;
+    border-width: 3px;
+    border-style: solid;
+}
+
+.card-name {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-name-item {
+    display: flex;
+}
+
+.card-title {
+    line-height: 1.2em;
+}
+
+.card-title h5 {
+    font-size: 16pt;
+    line-height: 1.5em;
+}
+
+.puntos {
+    align-self: flex-end;
+}
+
+.stats {
+    margin-top: 2em;
+    display: flex;
+    justify-content: space-around;
+    gap: 1rem;
+}
+
+.stats div {
+    text-align: center;
+}
+
+.ranking {
+    justify-self: flex-end;
+    text-align: center;
+}
+
+table, tbody, .female, .male{
+    border: solid 0px black;
+    width: 100%;
+    text-align: center;
+    line-height: 30px;
+    outline: 0;
+    gap:0;
+    margin: 0;
+    padding: 0;
+    border-spacing: 10px;
+    border-collapse: separate;
+}
+#info td{
+    padding: 10px;
+    border: 0;
+    border-radius: 5px;
+    text-transform: capitalize;
+
+}
+
+.nuevo, .female {
+    background: linear-gradient(90deg, #d53369 0%, #daae51 100%);
+}
+
+.medio, .male {
+    background: linear-gradient(90deg, #7133d5 0%, #51da6f 100%);
+}
+
+.pro {
+    background: linear-gradient(90deg, #3b1320 0%, #61f05c 100%);
+}
+
+.avanzado {
+    background: linear-gradient(-90deg, #290099 0%, #cbe656 100%);
+}
+
+.maestro {
+    background: linear-gradient(90deg, #fcef37 0%, #e27c7c 100%);
+}
+
+@media screen and (orientation: portrait) {
+    body {
+        background: linear-gradient(90deg, #e3ffe7 0%, #d9e7ff 100%);
+        overflow-x: hidden;
+    }
+}

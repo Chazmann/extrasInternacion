@@ -1,0 +1,45 @@
+[
+  '{{repeat(5, 7)}}',
+  {
+    paciente: '{{objectId()}}',
+    nropaciente: '{{random("b", "a", "c") + integer(123033, 232001)}}',
+    cama: '{{index()}}',
+    token: '{{guid()}}',
+    isActive: '{{bool()}}',
+    gastos: '{{floating(1000, 4000, 2, "$0,0.00")}}',
+   foto: 'http://placehold.it/32x32',
+    edad: '{{integer(20, 70)}}',
+    //iconos
+     laboratorio: '{{random("biotech new_releases", "new_releases", "biotech medication_liquid", "biotech medication", "masks medication_liquid")}}',
+    colorOjo: '{{random("azul", "marrón", "verde")}}',
+    name: '{{firstName()}} {{surname()}}',
+  sexo: '{{gender()}}',
+    company: '{{company().toUpperCase()}}',
+    email: '{{email()}}',
+    telefono: '+1 {{phone()}}',
+    direccion: '{{integer(100, 999)}} {{street()}}, {{city()}}, {{state()}}, {{integer(100, 10000)}}',
+    //acerca: '{{lorem(1, "paragraphs")}}',
+    //ingreso: '{{date(new Date(2022, 0, 1), new Date(), "YYYY-MM-ddThh:mm:ss Z")}}',
+    ingreso: '{{date(new Date(2022, 0, 1), new Date(), "YYYY-MM-dd Thh:mm")}}',
+    //latitude: '{{floating(-90.000001, 90)}}',
+    //longitude: '{{floating(-180.000001, 180)}}',
+   // tags: [
+  //    '{{repeat(7)}}',
+  //    '{{lorem(1, "words")}}'
+    //],
+   // friends: [
+     // '{{repeat(3)}}',
+     // {
+       // id: '{{index()}}',
+      //  nombre: '{{firstName()}} {{surname()}}'
+   //   }
+   // ],
+    saludo: function (tags) {
+      return 'Hola, ' + this.name + '! Tenés ' + tags.integer(1, 10) + ' mensajes sin leer.';
+    },
+    patologia: function (tags) {
+      var fruits = ['renal', 'diabetes', 'hipertension', 'pancreatitis'];
+      return fruits[tags.integer(0, fruits.length - 1)];
+    }
+  }
+]
