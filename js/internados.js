@@ -1,4 +1,4 @@
-console.log('Enlace establecido con "leerjson.js"');
+console.log('Enlace establecido con "internados.js"');
 //pim pam pum
 
 // document.querySelector('#boton').addEventListener('hover', traerDatos());
@@ -14,6 +14,16 @@ function crearsex(sexo) {
     }
 }
 
+function seguimiento(active) {
+    if (active == true) {
+        return 'check_circle'
+    } else if (active == false) {
+        return 'error_outline'
+    } else {
+        return 'error_outline'
+    }
+}
+
 function traerDatos() {
     console.log('dentro de la función');
 
@@ -25,18 +35,18 @@ function traerDatos() {
         if (this.readyState == 4 && this.status == 200) {
             //console.log(this.responseText);
             let datos = JSON.parse(this.responseText);
-
             //selecciono el ID donde voy a colocar la info
             resp.innerHTML = '';
-
+            //recorro el json y voy creando un item por cada registro
             for (let item of datos) {
                 console.log(item)
                 //pinto la tabla con los registros del json
                 resp.innerHTML += `   <tr class="${crearsex(item.sexo)}">
-                <td class=""><i class="material-icons-outlined">${item.laboratorio}</i> ${item.name}</td>
-                <td>${item.edad}</td>
-                <td>${item.patologia}</td>
+                <td class=""><p>${item.name}</p><p class="material-icons-outlined">${item.laboratorio}</p></td>
+                <td><p>Edad</p>${item.edad}</td>
+                <td><p></p>${item.patologia}</td>
                 <td>${item.gastos}</td>
+                <td> <p class="material-icons-outlined">${seguimiento(item.active)}</p></td>
             </tr>
                 
                 `;
