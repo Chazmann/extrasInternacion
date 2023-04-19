@@ -1,8 +1,6 @@
 console.log('Enlace establecido con "internados.js"');
-//pim pam pum
-
 // document.querySelector('#boton').addEventListener('hover', traerDatos());
-document.querySelector('#info').innerHTML(traerDatos());
+document.querySelector('#info').append(traerDatos());
 
 function crearsex(sexo) {
     if (sexo == 'male') {
@@ -38,8 +36,8 @@ function traerDatos() {
             //selecciono el ID donde voy a colocar la info
             resp.innerHTML = '';
             //recorro el json y voy creando un item por cada registro
-            for (let item of datos) {
-                console.log(item)
+            for (var item of datos) {
+                console.log(' Nro de Cama ' , item.cama)
                 //pinto la tabla con los registros del json
                 resp.innerHTML += `   <tr class="${crearsex(item.sexo)}">
                 <td class=""><p>${item.name}</p><p class="material-icons-outlined">${item.laboratorio}</p></td>
