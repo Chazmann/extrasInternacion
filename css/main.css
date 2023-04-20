@@ -33,7 +33,6 @@ body {
     
 }
 
-
 .tabla tbody, .tabla thead{ color:black }
 .tabla thead{
     background: linear-gradient(45deg, rgba(0, 0, 255, 0.371), rgba(255, 0, 0, 0.271), rgba(212, 255, 0, 0.298), rgba(0, 0, 255, 0.252), rgba(0, 0, 0, 0.488));
@@ -133,17 +132,15 @@ table, .female, .male{
     line-height: 30px;
     outline: 0;
     gap:0;
-    
     padding: 0;
-    border-spacing: 10px;
+    border-spacing: 0px 10px;
     border-collapse: separate;
 }
 #info td{
     padding: 10px;
     border: 0;
-    border-radius: 5px;
     text-transform: capitalize;
-
+  
 }
 
 .nuevo, .female {
