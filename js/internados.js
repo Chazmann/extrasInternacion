@@ -39,7 +39,8 @@ function traerDatos() {
             for (var item of datos) {
                 console.log(' Nro de Cama ' , item.cama)
                 //pinto la tabla con los registros del json
-                resp.innerHTML += `   <tr class="${crearsex(item.sexo)}">
+                resp.innerHTML += `   
+                <tr class="${crearsex(item.sexo)}">
                 <td class=""><p>${item.name}</p><p class="material-icons-outlined">${item.laboratorio}</p></td>
                 <td><p>Edad</p>${item.edad}</td>
                 <td><p></p>${item.patologia}</td>

@@ -1,0 +1,76 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    background-color: gray;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100vh;
+    gap:20px;
+}
+
+.square {
+    position: relative;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 26pt;
+    height: 200px;
+    width: 200px;
+    text-align: center;
+    line-height: 200px;
+    background-color: rgba(127, 255, 212, 0.534);
+    overflow: hidden;
+    transition: all .2s ease-in-out;
+
+
+}
+.square::before{
+    position: absolute;
+    content: '';
+   height: 100px;
+    width: 200%;
+    background-color: rgba(90, 33, 33, 0.434);
+    left: -210%;
+    transform: skew(30deg);
+    transition: all .2s ease-in-out;
+    mix-blend-mode:difference;
+}
+.square::after{
+    position: absolute;
+    content: '';
+    height: 100px;
+    width: 100%;
+    background-color: rgba(255, 0, 0, 0.434);
+   right:-110%;
+    bottom: 0;
+    transform: skew(30deg);
+    transition: all .2s ease-in-out;
+    /* mix-blend-mode:difference; */
+    /* filter: blur(10px); */
+     
+}
+.square:hover::after{
+    transition: all .2s ease-in-out;
+    translate: -180%;
+    
+}
+.square:hover::before{
+    transition: all .2s ease-in-out;
+    translate: 140%;
+    border-radius: 30px;
+    /* filter: blur(20px); */
+   
+}
+.square:hover{
+   border-radius: 50%;
+   background-color: coral;
+   box-shadow: 0 0 15px 1px rgba(255, 255, 255, 0.422);
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+    font-size: 40pt;
+    transform: rotate(-5deg);
+    cursor: pointer;
+}
