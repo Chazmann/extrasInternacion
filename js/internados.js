@@ -1,6 +1,7 @@
 console.log('Enlace establecido con "internados.js"');
 // document.querySelector('#boton').addEventListener('hover', traerDatos());
 document.querySelector('#info').append(traerDatos());
+document.querySelector('#camas').append(tarJeta());
 
 function crearsex(sexo) {
     if (sexo == 'male') {
@@ -58,8 +59,3 @@ function traerDatos() {
     }
  
 }
-
-
-
-
-

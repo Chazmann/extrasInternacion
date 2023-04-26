@@ -18,6 +18,7 @@ header {
     position: fixed;
     top: 0;
     align-items: center;
+    z-index: 1;
 }
     .usuario {
         
@@ -197,12 +198,12 @@ table,
 
 .nuevo,
 .female {
-    background: linear-gradient(90deg, #d53369 0%, #daae51 100%);
+    background: linear-gradient(90deg, #d533a2 0%, #daae51 100%);
 }
 
 .medio,
 .male {
-    background: linear-gradient(90deg, #7133d5 0%, #51da6f 100%);
+    background: linear-gradient(90deg, #4033d5 0%, #40a7b6 100%);
 }
 
 .pro {
