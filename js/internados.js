@@ -14,11 +14,11 @@ function crearsex(sexo) {
 
 function seguimiento(active) {
     if (active == true) {
-        return 'check_circle'
+        return 'visibility'
     } else if (active == false) {
-        return 'error_outline'
+        return 'visibility_off'
     } else {
-        return 'error_outline'
+        return 'visibility_off'
     }
 }
 
@@ -39,7 +39,9 @@ function traerDatos() {
             for (var item of datos) {
                 console.log(' Nro de Cama ' , item.cama)
                 //pinto la tabla con los registros del json
-                resp.innerHTML += `   
+                resp.innerHTML += ` 
+                
+                
                 <tr class="${crearsex(item.sexo)}">
                 <td class=""><p>${item.name}</p><p class="material-icons-outlined">${item.laboratorio}</p></td>
                 <td><p>Edad</p>${item.edad}</td>
@@ -48,9 +50,16 @@ function traerDatos() {
                 <td> <p class="material-icons-outlined">${seguimiento(item.active)}</p></td>
             </tr>
                 
+
+
                 `;
             }
         }
     }
  
 }
+
+
+
+
+
