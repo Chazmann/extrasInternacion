@@ -4,32 +4,66 @@
     box-sizing: border-box;
 }
 
+body{
+    padding-top: 80px;
+}
 header {
     background-color: #5b162d;
     height: 80px;
     width: 100vw;
     color: #d9e7ff;
-    padding: 10px;
-    padding-left: 40px;
+    padding: 10px 4%;
     line-height: 60px;
     /* text-align: center; */
     position: fixed;
     top: 0;
-    margin-bottom: 80px;
+    align-items: center;
 }
+    .usuario {
+        
+        background-color: white;
+        height: 40px;
+        line-height:20px;
+        padding: 10px 20px;
+        border-radius: 20px;
+        color:rgba(0, 0, 0, 0.814);
+        gap: 20px;
+    }
+
 
 body {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    
-    color:transparent!important;
-    
-    padding-top: 40px;
+
+    color: transparent !important;
+    padding-top: 80px;
 
 }
-.main-color{ background: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);}
-.secondary-back{background: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);;}
 
-.container, .tabla {
+.main-color {
+    background: linear-gradient(135deg, rgba(6, 147, 227, 1) 0%, rgb(155, 81, 224) 100%);
+}
+
+.secondary-back {
+    background: linear-gradient(135deg, rgba(252, 185, 0, 1) 0%, rgba(255, 105, 0, 1) 100%);
+    ;
+}
+
+.flex {
+    display: flex;
+}
+
+.spb {
+    justify-content: space-between;
+}
+
+.pdx {
+    padding: 10px 4%;
+}
+
+header {}
+
+.container,
+.tabla {
     width: 96%;
     gap: 1em;
     margin: auto;
@@ -38,13 +72,17 @@ body {
     flex-wrap: wrap;
     align-content: center;
     justify-content: center;
-    
+
 }
 
-.tabla tbody, .tabla thead{ color:black }
-.tabla thead{
+.tabla tbody,
+.tabla thead {
+    color: black
+}
+
+.tabla thead {
     /* background: linear-gradient(45deg, rgba(0, 0, 255, 0.371), rgba(255, 0, 0, 0.271), rgba(212, 255, 0, 0.298), rgba(0, 0, 255, 0.252), rgba(0, 0, 0, 0.488)); */
-    background: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);
+    background: linear-gradient(135deg, rgb(2, 3, 129) 0%, rgb(40, 116, 252) 100%);
     color: white;
     font-size: 1.3em;
     text-transform: uppercase;
@@ -135,30 +173,35 @@ body {
     text-align: center;
 }
 
-table, .female, .male{
+table,
+.female,
+.male {
     border: solid 0px black;
     width: 96%;
     margin: auto;
     text-align: center;
     line-height: 30px;
     outline: 0;
-    gap:0;
+    gap: 0;
     padding: 0;
     border-spacing: 0px 10px;
     border-collapse: separate;
 }
-#info td{
+
+#info td {
     padding: 10px;
     border: 0;
     text-transform: capitalize;
-  
+
 }
 
-.nuevo, .female {
+.nuevo,
+.female {
     background: linear-gradient(90deg, #d53369 0%, #daae51 100%);
 }
 
-.medio, .male {
+.medio,
+.male {
     background: linear-gradient(90deg, #7133d5 0%, #51da6f 100%);
 }
 
